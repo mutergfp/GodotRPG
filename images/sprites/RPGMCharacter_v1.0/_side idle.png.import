@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/_side idle.png-8a4ccb3439f1852a3e5d9b640b2c9496.stex"
+path="res://.import/_side idle.png-7db43e3640f9f04949c367082724bed6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/sprites/RPGMCharacter_v1.0/_side idle.png"
-dest_files=[ "res://.import/_side idle.png-8a4ccb3439f1852a3e5d9b640b2c9496.stex" ]
+source_file="res://Images/sprites/RPGMCharacter_v1.0/_side idle.png"
+dest_files=[ "res://.import/_side idle.png-7db43e3640f9f04949c367082724bed6.stex" ]
 
 [params]
 

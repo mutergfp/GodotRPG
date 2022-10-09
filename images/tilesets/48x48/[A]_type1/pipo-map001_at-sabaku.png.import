@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pipo-map001_at-sabaku.png-6833067711ab312b0cefe787a4eb837f.stex"
+path="res://.import/pipo-map001_at-sabaku.png-d6605e43e37aa2e8518685a6832f84c6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/tilesets/48x48/[A]_type1/pipo-map001_at-sabaku.png"
-dest_files=[ "res://.import/pipo-map001_at-sabaku.png-6833067711ab312b0cefe787a4eb837f.stex" ]
+source_file="res://Images/tilesets/48x48/[A]_type1/pipo-map001_at-sabaku.png"
+dest_files=[ "res://.import/pipo-map001_at-sabaku.png-d6605e43e37aa2e8518685a6832f84c6.stex" ]
 
 [params]
 

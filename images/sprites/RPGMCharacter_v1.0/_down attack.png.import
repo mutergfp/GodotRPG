@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/_down attack.png-3d2fd1d22c51aa667f1d3e080185368f.stex"
+path="res://.import/_down attack.png-0b2b7fc72872ceae8399f60164fbb527.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/sprites/RPGMCharacter_v1.0/_down attack.png"
-dest_files=[ "res://.import/_down attack.png-3d2fd1d22c51aa667f1d3e080185368f.stex" ]
+source_file="res://Images/sprites/RPGMCharacter_v1.0/_down attack.png"
+dest_files=[ "res://.import/_down attack.png-0b2b7fc72872ceae8399f60164fbb527.stex" ]
 
 [params]
 

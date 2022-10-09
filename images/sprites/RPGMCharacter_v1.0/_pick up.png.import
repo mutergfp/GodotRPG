@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/_pick up.png-1ae1d0444f114e894221963242c48816.stex"
+path="res://.import/_pick up.png-2c3bdee61700e1f1208be7c1b2858183.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/sprites/RPGMCharacter_v1.0/_pick up.png"
-dest_files=[ "res://.import/_pick up.png-1ae1d0444f114e894221963242c48816.stex" ]
+source_file="res://Images/sprites/RPGMCharacter_v1.0/_pick up.png"
+dest_files=[ "res://.import/_pick up.png-2c3bdee61700e1f1208be7c1b2858183.stex" ]
 
 [params]
 

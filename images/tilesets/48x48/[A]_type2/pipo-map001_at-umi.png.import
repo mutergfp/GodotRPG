@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pipo-map001_at-umi.png-b4c219499235dfdc4497d0f54c93f4c1.stex"
+path="res://.import/pipo-map001_at-umi.png-60bd67b6b4e0057b183710b8e7ec277c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/tilesets/48x48/[A]_type2/pipo-map001_at-umi.png"
-dest_files=[ "res://.import/pipo-map001_at-umi.png-b4c219499235dfdc4497d0f54c93f4c1.stex" ]
+source_file="res://Images/tilesets/48x48/[A]_type2/pipo-map001_at-umi.png"
+dest_files=[ "res://.import/pipo-map001_at-umi.png-60bd67b6b4e0057b183710b8e7ec277c.stex" ]
 
 [params]
 

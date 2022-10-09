@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/_up idle.png-965effbc98dc24747a86a307d3ae5a81.stex"
+path="res://.import/_up idle.png-179b9c7b1988cd40766069e808a1d52c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/sprites/RPGMCharacter_v1.0/_up idle.png"
-dest_files=[ "res://.import/_up idle.png-965effbc98dc24747a86a307d3ae5a81.stex" ]
+source_file="res://Images/sprites/RPGMCharacter_v1.0/_up idle.png"
+dest_files=[ "res://.import/_up idle.png-179b9c7b1988cd40766069e808a1d52c.stex" ]
 
 [params]
 
