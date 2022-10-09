@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://images/sprites/RPGMCharacter_v1.0/_down idle.png" type="Texture" id=1]
 [ext_resource path="res://images/sprites/RPGMCharacter_v1.0/_side idle.png" type="Texture" id=2]
@@ -6,118 +6,50 @@
 [ext_resource path="res://images/sprites/RPGMCharacter_v1.0/_up walk.png" type="Texture" id=4]
 [ext_resource path="res://images/sprites/RPGMCharacter_v1.0/_up idle.png" type="Texture" id=5]
 [ext_resource path="res://images/sprites/RPGMCharacter_v1.0/_side walk.png" type="Texture" id=6]
+[ext_resource path="res://Player.gd" type="Script" id=7]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 5.0
 height = 0.0
 
 [sub_resource type="Animation" id=2]
-length = 0.001
+resource_name = "MoveDown"
+length = 1.2
+step = 0.2
 tracks/0/type = "value"
-tracks/0/path = NodePath("Static/Down:frame")
+tracks/0/path = NodePath("Dynamic/Down:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Static/Down:frame_coords")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Static/Up:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0 ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("Static/Side:frame")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0 ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("Dynamic/Up:frame")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0 ]
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5 ]
 }
 
 [sub_resource type="Animation" id=3]
-resource_name = "walk_down"
-length = 1.5
-step = 0.15
+resource_name = "MoveSide"
+length = 1.2
+loop = true
+step = 0.2
 tracks/0/type = "value"
-tracks/0/path = NodePath("Static/Down:frame")
+tracks/0/path = NodePath("Dynamic/Side:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.15, 0.3, 0.45, 0.6, 0.75, 0.9, 1.05, 1.2, 1.35 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 0, 1, 2, 3, 4, 0, 1, 2, 3, 4 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Static/Up:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.15, 0.3, 0.45, 0.6, 0.75, 0.9, 1.05, 1.2, 1.35 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 3, 4, 0, 1, 2, 3, 4 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Static/Side:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.15, 0.3, 0.45, 0.6, 0.75, 0.9, 1.05, 1.2, 1.35 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 3, 4, 0, 1, 2, 3, 4 ]
+"values": [ 0, 1, 2, 3, 4, 5 ]
 }
 
 [sub_resource type="Animation" id=4]
+resource_name = "MoveUp"
 length = 1.2
-loop = true
 step = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("Dynamic/Up:frame")
@@ -131,35 +63,10 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 0, 1, 2, 3, 4, 5 ]
 }
-tracks/1/type = "value"
-tracks/1/path = NodePath("Dynamic/Down:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 3, 4, 5 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Dynamic/Side:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 3, 4, 5 ]
-}
 
 [sub_resource type="Animation" id=5]
-resource_name = "walk_down"
-length = 1.5
-step = 0.15
+resource_name = "StaticDown"
+step = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("Static/Down:frame")
 tracks/0/interp = 1
@@ -167,37 +74,46 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.15, 0.3, 0.45, 0.6, 0.75, 0.9, 1.05, 1.2, 1.35 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 0, 1, 2, 3, 4, 0, 1, 2, 3, 4 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Static/Up:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.15, 0.3, 0.45, 0.6, 0.75, 0.9, 1.05, 1.2, 1.35 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 3, 4, 0, 1, 2, 3, 4 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Static/Side:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.15, 0.3, 0.45, 0.6, 0.75, 0.9, 1.05, 1.2, 1.35 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 3, 4, 0, 1, 2, 3, 4 ]
+"values": [ 0, 1, 2, 3, 4 ]
 }
 
-[node name="PlayerFacingDown" type="KinematicBody2D"]
+[sub_resource type="Animation" id=6]
+resource_name = "StaticSide"
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Static/Side:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "StaticUp"
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Static/Up:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4 ]
+}
+
+[node name="Player" type="KinematicBody2D"]
+script = ExtResource( 7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 1, 13 )
@@ -211,43 +127,47 @@ visible = false
 texture = ExtResource( 5 )
 hframes = 4
 vframes = 2
+frame = 2
 
 [node name="Down" type="Sprite" parent="Static"]
 visible = false
 texture = ExtResource( 1 )
 hframes = 4
 vframes = 2
+frame = 4
 
 [node name="Side" type="Sprite" parent="Static"]
 visible = false
 texture = ExtResource( 2 )
 hframes = 4
 vframes = 2
-
-[node name="PlayerAnimationStatic" type="AnimationPlayer" parent="Static"]
-root_node = NodePath("../..")
-anims/RESET = SubResource( 2 )
-anims/walk_down = SubResource( 3 )
+frame = 4
 
 [node name="Dynamic" type="Node2D" parent="."]
 
 [node name="Up" type="Sprite" parent="Dynamic"]
+visible = false
 texture = ExtResource( 4 )
 hframes = 4
 vframes = 2
 
 [node name="Down" type="Sprite" parent="Dynamic"]
+visible = false
 texture = ExtResource( 3 )
 hframes = 4
 vframes = 2
+frame = 5
 
 [node name="Side" type="Sprite" parent="Dynamic"]
 texture = ExtResource( 6 )
 hframes = 4
 vframes = 2
-frame = 6
+frame = 5
 
-[node name="PlayerAnimationStatic" type="AnimationPlayer" parent="Dynamic"]
-root_node = NodePath("../..")
-anims/RESET = SubResource( 4 )
-anims/walk_down = SubResource( 5 )
+[node name="PlayerAnimation" type="AnimationPlayer" parent="."]
+anims/MoveDown = SubResource( 2 )
+anims/MoveSide = SubResource( 3 )
+anims/MoveUp = SubResource( 4 )
+anims/StaticDown = SubResource( 5 )
+anims/StaticSide = SubResource( 6 )
+anims/StaticUp = SubResource( 7 )

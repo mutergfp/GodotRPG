@@ -1,5 +1,8 @@
 extends KinematicBody2D
 
+export var speed = 400
+
+onready var PlayerAnimationDynamic = $Dynamic/PlayerAnimationDynamic
 
 # Declare member variables here. Examples:
 # var a = 2
