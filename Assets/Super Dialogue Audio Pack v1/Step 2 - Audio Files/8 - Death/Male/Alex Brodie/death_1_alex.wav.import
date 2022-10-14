@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://begvjxxvlot0"
+path="res://.godot/imported/death_1_alex.wav-81d30c56d7ea7d45451ec954642d68e7.sample"
+
+[deps]
+
+source_file="res://Assets/Super Dialogue Audio Pack v1/Step 2 - Audio Files/8 - Death/Male/Alex Brodie/death_1_alex.wav"
+dest_files=["res://.godot/imported/death_1_alex.wav-81d30c56d7ea7d45451ec954642d68e7.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

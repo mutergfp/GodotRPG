@@ -1,0 +1,84 @@
+[gd_scene load_steps=12 format=3 uid="uid://dgqjxqo170icr"]
+
+[ext_resource type="Texture2D" uid="uid://c43fwaosakwqo" path="res://Assets/DynamicSprites/Bat.png" id="1"]
+[ext_resource type="Script" path="res://Scripts/Bat.gd" id="2"]
+
+[sub_resource type="CapsuleShape2D" id="1"]
+radius = 0.0
+height = 0.0
+
+[sub_resource type="AtlasTexture" id="2"]
+atlas = ExtResource("1")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="3"]
+atlas = ExtResource("1")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="4"]
+atlas = ExtResource("1")
+region = Rect2(32, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="5"]
+atlas = ExtResource("1")
+region = Rect2(48, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="6"]
+atlas = ExtResource("1")
+region = Rect2(64, 0, 16, 24)
+
+[sub_resource type="SpriteFrames" id="7"]
+animations = [{
+"frames": [SubResource("2"), SubResource("3"), SubResource("4"), SubResource("5"), SubResource("6")],
+"loop": true,
+"name": &"fly",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="8"]
+radius = 88.0
+
+[sub_resource type="CircleShape2D" id="9"]
+radius = 200.0
+
+[node name="Bat" type="CharacterBody2D"]
+script = ExtResource("2")
+_max_speed = 80
+_friction = 1
+_acceleration = 400
+_minSecResetMoving = 4
+_maxSecResetMoving = 8
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("1")
+
+[node name="BatAnimatedSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -8)
+frames = SubResource("7")
+animation = &"fly"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+smoothing_enabled = true
+
+[node name="DetectArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectArea"]
+shape = SubResource("8")
+
+[node name="FollowArea" type="Area2D" parent="."]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FollowArea"]
+shape = SubResource("9")
+
+[node name="ResetMoving" type="Timer" parent="."]
+process_mode = 1
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+avoidance_enabled = true
+radius = 5.0
+
+[connection signal="child_entered_tree" from="Hitbox" to="." method="_on_Hitbox_child_entered_tree"]
+[connection signal="body_entered" from="DetectArea" to="." method="_on_DetectArea_body_entered"]
+[connection signal="body_exited" from="FollowArea" to="." method="_on_FollowArea_body_exited"]
+[connection signal="timeout" from="ResetMoving" to="." method="_on_ResetMoving_timeout"]

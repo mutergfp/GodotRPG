@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://0y1tyjpad8iq"
+path="res://.godot/imported/miscellaneous_14_ian.wav-9938f236785d504c91f88f2a414716d4.sample"
+
+[deps]
+
+source_file="res://Assets/Super Dialogue Audio Pack v1/Step 2 - Audio Files/6 - Miscellaneous/Male/Ian Lampert/miscellaneous_14_ian.wav"
+dest_files=["res://.godot/imported/miscellaneous_14_ian.wav-9938f236785d504c91f88f2a414716d4.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

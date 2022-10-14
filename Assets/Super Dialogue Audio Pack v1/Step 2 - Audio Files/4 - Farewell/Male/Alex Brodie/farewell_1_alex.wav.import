@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dm3lpiqp0xtvc"
+path="res://.godot/imported/farewell_1_alex.wav-232d4a06807995a78fb2c5c91d130d48.sample"
+
+[deps]
+
+source_file="res://Assets/Super Dialogue Audio Pack v1/Step 2 - Audio Files/4 - Farewell/Male/Alex Brodie/farewell_1_alex.wav"
+dest_files=["res://.godot/imported/farewell_1_alex.wav-232d4a06807995a78fb2c5c91d130d48.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
